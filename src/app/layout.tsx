@@ -32,7 +32,7 @@ export default function RootLayout({
             >
                 <div className="max-w-screen-lg mx-auto px-4">
                     <Header />
-                    <main>{children}</main>
+                    <main className="min-h-[80vh]">{children}</main>
                     <Footer />
                 </div>
             </body>
