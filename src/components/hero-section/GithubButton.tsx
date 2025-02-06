@@ -8,7 +8,7 @@ const GithubButton = ({ title = "View Github" }) => {
             href={process.env.NEXT_PUBLIC_GITHUB || "/"}
             className="btn-dark icon-container"
         >
-            <GithubIcon className="text-2xl" />
+            <GithubIcon className="icon-md" />
             <span>{title}</span>
         </Link>
     );

@@ -24,7 +24,7 @@ const ShowProjects = ({ limit = 0 }) => {
                         onClick={() => setLimited(false)}
                     >
                         Expand more
-                        <RightArrow />
+                        <RightArrow className="icon-sm" />
                     </button>
                 ) : (
                     <GithubButton title="More on GitHub" />

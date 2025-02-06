@@ -18,7 +18,7 @@ const NavBar = () => {
                     onClick={() => setOpen(!open)}
                 >
                     <span className="sr-only">Open main menu</span>
-                    <NavMenu className="icon" />
+                    <NavMenu className="icon-lg" />
                 </button>
 
                 <div
