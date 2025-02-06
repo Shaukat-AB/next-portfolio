@@ -25,7 +25,7 @@ const ShowProjects = ({ limit = 0 }) => {
                         Expand more
                     </button>
                 ) : (
-                    <GithubButton />
+                    <GithubButton title="More on GitHub" />
                 )}
             </div>
         </>

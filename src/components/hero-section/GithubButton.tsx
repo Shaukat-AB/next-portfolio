@@ -1,7 +1,7 @@
 import { GithubIcon } from "@/lib/icons";
 import Link from "next/link";
 
-const GithubButton = () => {
+const GithubButton = ({ title = "View Github" }) => {
     return (
         <Link
             target="_blank"
@@ -9,7 +9,7 @@ const GithubButton = () => {
             className="btn-dark inline-flex justify-center items-center gap-2"
         >
             <GithubIcon className="text-2xl" />
-            <span>View Github</span>
+            <span>{title}</span>
         </Link>
     );
 };
