@@ -1,6 +1,6 @@
+import ProjectImage from "@/components/project-card/ProjectImage";
 import { projects } from "@/data/projects";
 import { convertToLowerCase } from "@/lib/util";
-import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
@@ -30,12 +30,11 @@ const ProjectPage = async ({
                             <>
                                 <h1>{children}</h1>
                                 <figure className="relative w-full aspect-video">
-                                    <Image
-                                        src={project.image}
-                                        className="object-scale-down"
-                                        fill
-                                        alt={project.title}
-                                    />
+                                    <ProjectImage project={project} />
+                                    <figcaption className="sr-only">
+                                        This shows landing page of{" "}
+                                        {project.title}
+                                    </figcaption>
                                 </figure>
                             </>
                         );

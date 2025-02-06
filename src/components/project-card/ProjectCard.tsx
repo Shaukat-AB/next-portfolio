@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { convertToLowerCase } from "@/lib/util";
+import ProjectImage from "./ProjectImage";
 
 type Project = {
     project: {
@@ -18,12 +18,9 @@ const ProjectCard = ({ project }: Project) => {
                 className="relative flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:opacity-90 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800"
             >
                 <div className="relative w-full aspect-video md:flex-1 max-h-80">
-                    <Image
-                        className="object-scale-down rounded-t-lg md:rounded-none md:rounded-s-lg"
-                        src={project?.image || "/images/project-image.jpg"}
-                        sizes="1200px"
-                        alt={project?.title || "Project"}
-                        fill
+                    <ProjectImage
+                        project={project}
+                        className="rounded-t-lg md:rounded-none md:rounded-s-lg"
                     />
                 </div>
                 {!project?.image && (
