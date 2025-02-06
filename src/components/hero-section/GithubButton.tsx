@@ -6,7 +6,7 @@ const GithubButton = ({ title = "View Github" }) => {
         <Link
             target="_blank"
             href={process.env.NEXT_PUBLIC_GITHUB || "/"}
-            className="btn-dark inline-flex justify-center items-center gap-2"
+            className="btn-dark icon-container"
         >
             <GithubIcon className="text-2xl" />
             <span>{title}</span>

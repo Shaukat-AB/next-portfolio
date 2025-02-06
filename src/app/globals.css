@@ -45,6 +45,9 @@ body {
   .link {
       @apply text-sm font-medium focus:outline-none hover:text-blue-700 hover:underline focus:z-10 focus:ring-4 focus:ring-gray-100;
   }
+  .icon-container{
+    @apply inline-flex justify-center items-center gap-2
+  }
   .icon {
     @apply text-7xl
   }
