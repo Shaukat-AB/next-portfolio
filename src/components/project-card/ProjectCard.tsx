@@ -19,7 +19,7 @@ const ProjectCard = ({ project }: Project) => {
             >
                 <div className="relative w-full aspect-video md:flex-1 max-h-80">
                     <Image
-                        className="object-fill rounded-t-lg md:rounded-none md:rounded-s-lg"
+                        className="object-scale-down rounded-t-lg md:rounded-none md:rounded-s-lg"
                         src={project?.image || "/images/project-image.jpg"}
                         sizes="1200px"
                         alt={project?.title || "Project"}

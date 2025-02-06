@@ -1,5 +1,6 @@
 import { projects } from "@/data/projects";
 import { convertToLowerCase } from "@/lib/util";
+import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
@@ -9,30 +10,49 @@ const ProjectPage = async ({
     params: Promise<{ title: string }>;
 }) => {
     const title = (await params).title;
-    const [link] = projects.filter(
+    const [project] = projects.filter(
         (project) => convertToLowerCase(project.title) == title
     );
-    if (!link) return;
-    const respone: Response = await fetch(link.readme);
+    if (!project) return;
+    const respone: Response = await fetch(project.readme);
     if (!respone.ok) {
         throw new Error("Project not found.");
     }
     const readme = await respone.text();
 
     return (
-        <ReactMarkdown
-            className="prose lg:prose-xl py-8 prose-a:no-underline"
-            components={{
-                a: ({ href, children }) =>
-                    href && (
-                        <Link href={href} className="btn-primary px-4">
-                            {children}
-                        </Link>
-                    ),
-            }}
-        >
-            {readme}
-        </ReactMarkdown>
+        <article>
+            <ReactMarkdown
+                className="prose lg:prose-xl py-8 prose-a:no-underline"
+                components={{
+                    h1: ({ children }) => {
+                        return (
+                            <>
+                                <h1>{children}</h1>
+                                <figure className="relative w-full aspect-video">
+                                    <Image
+                                        src={project.image}
+                                        className="object-scale-down"
+                                        fill
+                                        alt={project.title}
+                                    />
+                                </figure>
+                            </>
+                        );
+                    },
+                    a: ({ href, children }) =>
+                        href && (
+                            <span className="block py-4 w-full">
+                                <Link href={href} className="btn-primary px-4">
+                                    {children}
+                                </Link>
+                            </span>
+                        ),
+                }}
+            >
+                {readme}
+            </ReactMarkdown>
+        </article>
     );
 };
 
