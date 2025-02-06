@@ -24,7 +24,7 @@ const NavBar = () => {
                 <div
                     id="navbar"
                     className={`${
-                        !open ? "hidden" : "absolute top-[100px] left-0"
+                        !open ? "hidden" : "absolute top-[100px] left-0 z-50"
                     } w-full px-5`}
                 >
                     <NavList />
