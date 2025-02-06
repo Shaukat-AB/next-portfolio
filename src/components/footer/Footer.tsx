@@ -20,7 +20,10 @@ const Footer = () => {
                 </nav>
 
                 <span className="text-sm">
-                    © {currentYear} <FooterLink href="/" title={"Portfolio"} />.
+                    © {currentYear} Developed By{" "}
+                    <strong className="font-normal">
+                        Shaukat - <FooterLink href="/" title={"Portfolio"} />.
+                    </strong>{" "}
                     All Rights Reserved.
                 </span>
             </section>
