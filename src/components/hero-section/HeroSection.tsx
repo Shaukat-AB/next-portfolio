@@ -5,7 +5,7 @@ const HeroSection = () => {
     return (
         <section className="min-h-[80vh] text-center flex items-center justify-center flex-col mb-16">
             <h1 className="main-title mb-8">
-                Build Responsive And Dynamic Web Apps
+                Build Apps Beyond Coding
             </h1>
             <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
                 Hi! my name is Shaukat Ali. I am a full-stack website developer
