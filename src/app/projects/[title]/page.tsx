@@ -1,9 +1,8 @@
-import ProjectImage from "@/components/project-card/ProjectImage";
 import { projects } from "@/data/projects";
 import { convertToLowerCase } from "@/lib/util";
-import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import ProjectLink from "../_components/ProjectLink";
+import ProjectHero from "../_components/ProjectHero";
 
 export const generateMetadata = async ({
     params,
@@ -37,20 +36,9 @@ const ProjectPage = async ({
             <ReactMarkdown
                 className="prose lg:prose-xl py-8 prose-a:no-underline"
                 components={{
-                    h1: ({ children }) => {
-                        return (
-                            <>
-                                <h1>{children}</h1>
-                                <figure className="relative w-full aspect-video">
-                                    <ProjectImage project={project} />
-                                    <figcaption className="sr-only">
-                                        This shows landing page of{" "}
-                                        {project.title}
-                                    </figcaption>
-                                </figure>
-                            </>
-                        );
-                    },
+                    h1: ({ children }) => (
+                        <ProjectHero project={project}>{children}</ProjectHero>
+                    ),
                     a: ({ href, children }) => (
                         <ProjectLink href={href}>{children}</ProjectLink>
                     ),
