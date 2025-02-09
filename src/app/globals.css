@@ -20,10 +20,21 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer utilities {
+@layer components {
+    /* Gradients */
+    .gradient-dark {
+        @apply bg-gradient-to-r from-slate-900 to-slate-700;
+    }
+
+    /* Containers */
     .max-container {
         @apply max-w-screen-lg mx-auto px-4;
     }
+    .icon-container {
+        @apply inline-flex justify-center items-center gap-2;
+    }
+
+    /* Titles */
     .main-title {
         @apply text-4xl font-extrabold leading-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white;
     }
@@ -36,7 +47,7 @@ body {
         @apply px-12 py-3 text-base font-semibold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
     }
     .btn-dark {
-        @apply px-12 py-3 text-base font-semibold text-center text-gray-900 hover:text-white border border-gray-800 hover:bg-gradient-to-r from-slate-900 to-slate-700 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800;
+        @apply px-12 py-3 text-base font-semibold text-center text-gray-900 hover:text-white border border-gray-800 hover:gradient-dark focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800;
     }
     .btn-disable {
         @apply text-white bg-blue-400 dark:bg-blue-500 cursor-not-allowed font-medium rounded-lg text-sm px-5 py-2.5 text-center;
@@ -44,14 +55,19 @@ body {
     .btn-icon {
         @apply inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600;
     }
-    .link {
-        @apply text-sm font-medium focus:outline-none hover:text-blue-700 hover:underline focus:z-10 focus:ring-4 focus:ring-gray-100;
+
+    /* Links */
+    .nav-link-active {
+        @apply bg-blue-700 text-white;
+    }
+    .nav-link {
+        @apply block py-2 px-3 rounded-sm hover:nav-link-active;
+    }
+    .footer-link {
+        @apply text-gray-300 text-sm font-medium focus:outline-none hover:text-blue-500 hover:underline focus:z-10 focus:ring-4 focus:ring-gray-100;
     }
 
     /* Icon styles */
-    .icon-container {
-        @apply inline-flex justify-center items-center gap-2;
-    }
     .icon-sm {
         @apply text-xl;
     }

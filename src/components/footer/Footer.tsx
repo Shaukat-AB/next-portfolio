@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
     return (
-        <footer className="min-h-[80vh] flex items-center justify-between px-4 py-4 h-[80vh] text-gray-50 text-center before:content-[hello] bg-gray-900">
+        <footer className="min-h-[80vh] flex items-center justify-between px-4 py-4 h-[80vh] text-gray-50 before:content-[''] bg-gray-900">
             <section className="max-container flex flex-col gap-16 justify-center items-center w-full">
                 <nav className="flex flex-col gap-16 md:flex-row justify-around w-full">
                     <div>
@@ -22,7 +22,7 @@ const Footer = () => {
                 <span className="text-sm">
                     © {currentYear} Developed By{" "}
                     <strong className="font-normal">
-                        Shaukat - <FooterLink href="/" title={"Portfolio"} />.
+                        Shaukat - Portfolio
                     </strong>{" "}
                     All Rights Reserved.
                 </span>

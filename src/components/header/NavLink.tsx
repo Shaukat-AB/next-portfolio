@@ -10,9 +10,7 @@ const NavLink = ({ title = "", href = "/" }) => {
     return (
         <Link
             href={href}
-            className={`block py-2 px-3 rounded-sm ${
-                isActive ? "bg-blue-700 text-white" : ""
-            } hover:bg-blue-700 hover:text-white`}
+            className={`nav-link ${isActive ? "nav-link-active" : ""}`}
         >
             {title}
         </Link>

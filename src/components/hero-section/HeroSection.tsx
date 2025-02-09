@@ -9,7 +9,7 @@ const HeroSection = () => {
             </h1>
             <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
                 Hi! my name is Shaukat Ali. I am a full-stack website developer
-                specializing in React.js, front-end development, and the MERN
+                specializing in React.js, Front-end development, and the MERN
                 stack. I can develop websites of all sizes. Do you need a
                 website or want to work together? Let's start now.
             </p>
