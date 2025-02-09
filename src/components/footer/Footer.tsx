@@ -1,5 +1,4 @@
 import { navLinks, socialLinks } from "@/data/links";
-import FooterLink from "./FooterLink";
 import FooterLinkList from "./FooterLinkList";
 
 const currentYear = new Date().getFullYear();
