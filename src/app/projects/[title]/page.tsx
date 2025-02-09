@@ -4,6 +4,17 @@ import { convertToLowerCase } from "@/lib/util";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
+export const generateMetadata = async ({
+    params,
+}: {
+    params: Promise<{ title: string }>;
+}) => {
+    const title = (await params).title;
+    return {
+        title: `${title}`,
+    };
+};
+
 const ProjectPage = async ({
     params,
 }: {

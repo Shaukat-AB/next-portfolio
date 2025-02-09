@@ -15,7 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Portfolio",
+    title: {
+        template: "%s | Portfolio",
+        default: "Portfolio",
+    },
     description:
         "This project showcases my work and skills as developer built using Next.js 15 and Tailwind CSS for responsive layout.",
 };
@@ -31,9 +34,7 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 <Header />
-                <main className="min-h-[80vh] max-container">
-                    {children}
-                </main>
+                <main className="min-h-[80vh] max-container">{children}</main>
                 <Footer />
             </body>
         </html>
