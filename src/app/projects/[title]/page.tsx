@@ -3,6 +3,7 @@ import { projects } from "@/data/projects";
 import { convertToLowerCase } from "@/lib/util";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import ProjectLink from "../_components/ProjectLink";
 
 export const generateMetadata = async ({
     params,
@@ -50,14 +51,9 @@ const ProjectPage = async ({
                             </>
                         );
                     },
-                    a: ({ href, children }) =>
-                        href && (
-                            <span className="block py-4 w-full">
-                                <Link href={href} className="btn-primary px-4">
-                                    {children}
-                                </Link>
-                            </span>
-                        ),
+                    a: ({ href, children }) => (
+                        <ProjectLink href={href}>{children}</ProjectLink>
+                    ),
                 }}
             >
                 {readme}
