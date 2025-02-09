@@ -1,5 +1,8 @@
+import GithubButton from "@/components/hero-section/GithubButton";
 import ProjectImage from "@/components/project-card/ProjectImage";
 import { TProject } from "@/types";
+import ProjectLink from "./ProjectLink";
+import Link from "next/link";
 
 const ProjectHero = ({
     project,
@@ -17,6 +20,22 @@ const ProjectHero = ({
                     This shows landing page of {project.title}
                 </figcaption>
             </figure>
+            <div className="flex justify-end gap-4">
+                {project?.demo && (
+                    <Link
+                        href={project.demo}
+                        target="_blank"
+                        className="btn-primary text-sm icon-container"
+                    >
+                        Demo
+                    </Link>
+                )}
+                <GithubButton
+                    href={project.github}
+                    title="Code"
+                    className="text-sm"
+                />
+            </div>
         </>
     );
 };
