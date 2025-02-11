@@ -12,7 +12,7 @@ const NavBar = () => {
             <div className="center-container">
                 <button
                     type="button"
-                    className="btn-icon"
+                    className="btn-nav"
                     aria-controls="navbar"
                     aria-expanded={open ? "true" : "false"}
                     onClick={() => setOpen(!open)}
