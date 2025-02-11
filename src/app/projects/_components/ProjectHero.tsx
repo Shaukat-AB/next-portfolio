@@ -1,7 +1,6 @@
 import GithubButton from "@/components/hero-section/GithubButton";
 import ProjectImage from "@/components/project-card/ProjectImage";
 import { TProject } from "@/types";
-import ProjectLink from "./ProjectLink";
 import Link from "next/link";
 
 const ProjectHero = ({

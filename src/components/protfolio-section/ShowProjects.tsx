@@ -10,7 +10,7 @@ const ShowProjects = ({ limit = 0 }) => {
     const [limited, setLimited] = useState(true);
     const projects = useMemo(() => {
         return limited ? allProjects.slice(0, limit) : allProjects;
-    }, [limited]);
+    }, [limited, limit]);
 
     return (
         <>

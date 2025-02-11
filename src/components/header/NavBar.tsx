@@ -5,7 +5,7 @@ import { useState } from "react";
 import NavList from "./NavList";
 
 const NavBar = () => {
-    const [open, setOpen] = useState<Boolean>(false);
+    const [open, setOpen] = useState<boolean>(false);
 
     return (
         <nav className="flex">
