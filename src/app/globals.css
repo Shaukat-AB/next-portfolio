@@ -60,11 +60,14 @@ body {
         @apply border-2 border-border-gray rounded-lg;
     }
     /* Button styles */
+    .btn-base {
+        @apply px-12 py-3 text-base-center transition-colors
+    }
     .btn-primary {
-        @apply px-12 py-3 text-base-center text-white bg-primary rounded-lg hover:bg-primary-light focus:ring-4 focus:outline-none focus:ring-cyan-600;
+        @apply btn-base text-white bg-primary rounded-lg hover:bg-primary-light focus:ring-4 focus:outline-none focus:ring-cyan-600;
     }
     .btn-dark {
-        @apply px-12 py-3 text-base-center text-gray-900 hover:text-white border border-gray-800 hover:gradient-dark focus:ring-4 focus:outline-none rounded-lg focus:ring-gray-800;
+        @apply btn-base text-gray-900 hover:text-white border border-gray-800 hover:gradient-dark focus:ring-4 focus:outline-none rounded-lg focus:ring-gray-800;
     }
     .btn-disable {
         @apply text-white bg-blue-500 cursor-not-allowed font-medium rounded-lg text-sm px-5 py-2.5 text-center;
@@ -93,5 +96,10 @@ body {
     }
     .icon-lg {
         @apply text-7xl;
+    }
+
+    /* Animation */
+    .nav-open-animate {
+        @apply motion-safe:animate-fade-up motion-safe:animate-duration-[300ms];
     }
 }
