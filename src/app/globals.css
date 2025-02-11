@@ -37,7 +37,10 @@ body {
         @apply center-container gap-2;
     }
 
-    /* Titles */
+    /* Typography */
+    .text-base-center {
+        @apply text-base font-semibold text-center;
+    }
     .main-title {
         @apply text-4xl font-extrabold leading-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white;
     }
@@ -47,10 +50,10 @@ body {
 
     /* Button styles */
     .btn-primary {
-        @apply px-12 py-3 text-base font-semibold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
+        @apply px-12 py-3 text-base-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
     }
     .btn-dark {
-        @apply px-12 py-3 text-base font-semibold text-center text-gray-900 hover:text-white border border-gray-800 hover:gradient-dark focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800;
+        @apply px-12 py-3 text-base-center text-gray-900 hover:text-white border border-gray-800 hover:gradient-dark focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800;
     }
     .btn-disable {
         @apply text-white bg-blue-400 dark:bg-blue-500 cursor-not-allowed font-medium rounded-lg text-sm px-5 py-2.5 text-center;
