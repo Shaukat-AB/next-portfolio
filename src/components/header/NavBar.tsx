@@ -8,7 +8,7 @@ const NavBar = () => {
     const [open, setOpen] = useState<Boolean>(false);
 
     return (
-        <nav className="flex border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <nav className="flex">
             <div className="center-container">
                 <button
                     type="button"
