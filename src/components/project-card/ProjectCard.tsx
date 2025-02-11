@@ -1,16 +1,9 @@
 import Link from "next/link";
 import { convertToLowerCase } from "@/lib/util";
 import ProjectImage from "./ProjectImage";
+import { TProject } from "@/types";
 
-type Project = {
-    project: {
-        title: string;
-        image: string;
-        readme: string;
-    };
-};
-
-const ProjectCard = ({ project }: Project) => {
+const ProjectCard = ({ project }: { project: TProject }) => {
     return (
         <div className="w-full mb-12 max-w-md mx-auto">
             <Link
