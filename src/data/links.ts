@@ -9,5 +9,8 @@ export const navLinks: TLink[] = [
 
 export const socialLinks: TLink[] = [
     { title: "Github", href: process.env.NEXT_PUBLIC_GITHUB || "" },
-    { title: "LinkedIn", href: process.env.NEXT_PUBLIC_GITHUB || "" },
+    { title: "LinkedIn", href: process.env.NEXT_PUBLIC_LINKEDIN || "" },
 ];
+
+export const githubLink = socialLinks[0].href;
+export const linkedinLink = socialLinks[1].href;
