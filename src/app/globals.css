@@ -52,6 +52,7 @@ body {
     .sub-title {
         @apply text-3xl font-bold dark:text-white;
     }
+    
     /* Borders */
     .header-border {
         @apply border-b-2 rounded-b-sm border-border-gray;
@@ -59,6 +60,7 @@ body {
     .nav-border {
         @apply border-2 border-border-gray rounded-lg;
     }
+
     /* Button styles */
     .btn-base {
         @apply px-12 py-3 text-base-center transition-colors;
@@ -84,7 +86,7 @@ body {
         @apply block py-2 px-3 rounded-sm hover:nav-link-active transition-colors;
     }
     .footer-link {
-        @apply text-gray-300 text-sm font-medium focus:outline-none hover:text-blue-500 hover:underline focus:z-10 focus:ring-4 focus:ring-gray-100;
+        @apply text-gray-300 focus:outline-none hover:text-blue-500 hover:underline focus:z-10 focus:ring-4 focus:ring-gray-100;
     }
 
     /* Icon styles */
