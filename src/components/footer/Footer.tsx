@@ -5,9 +5,9 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
     return (
-        <footer className="min-h-[80vh] flex items-center justify-between px-4 py-4 h-[80vh] text-gray-50 before:content-[''] bg-gray-900">
-            <section className="max-container flex flex-col gap-16 justify-center items-center w-full">
-                <nav className="flex flex-col gap-16 md:flex-row justify-around w-full">
+        <footer className="min-h-[80vh] flex items-center justify-between px-4 py-4 h-[80vh] text-gray-50 before:content-[''] bg-dark">
+            <section className="max-container flex flex-col gap-16 items-center w-full">
+                <nav className="flex flex-col gap-8 sm:flex-row sm:justify-around w-full">
                     <div>
                         <h3 className="sub-title mb-4">Portfolio</h3>
                         <FooterLinkList links={navLinks} />
