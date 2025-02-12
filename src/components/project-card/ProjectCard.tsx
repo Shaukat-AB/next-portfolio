@@ -8,7 +8,7 @@ const ProjectCard = ({ project }: { project: TProject }) => {
         <div className="w-full mb-12 max-w-md mx-auto">
             <Link
                 href={`projects/${convertToLowerCase(project?.title || "")}`}
-                className="relative flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:opacity-90 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800"
+                className="relative flex flex-col items-center bg-gray-100 filter border border-border-gray rounded-lg shadow md:flex-row hover:brightness-90 hover:bg-gray-200 transition-all"
             >
                 <div className="relative w-full aspect-video md:flex-1 max-h-80">
                     <ProjectImage
