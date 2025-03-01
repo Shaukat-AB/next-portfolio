@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
     content: [
@@ -16,6 +17,10 @@ export default {
                 "primary-light": "var(--primary-light)",
                 dark: "var(--dark)",
                 "border-gray": "var(--border-gray)",
+            },
+            fontFamily: {
+                "sans": ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+                "mono": ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
             },
         },
     },

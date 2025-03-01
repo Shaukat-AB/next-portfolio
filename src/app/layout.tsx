@@ -5,12 +5,12 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 
 const geistSans = Geist({
-    variable: "--font-geist-sans",
+    variable: "--font-sans",
     subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+    variable: "--font-mono",
     subsets: ["latin"],
 });
 
@@ -31,7 +31,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
             >
                 <Header />
                 <main className="min-h-[80vh] max-container">{children}</main>
