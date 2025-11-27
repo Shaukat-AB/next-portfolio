@@ -9,16 +9,16 @@ const Footer = () => {
       <section className="max-container flex flex-col gap-16 items-center w-full">
         <nav className="flex flex-col gap-8 sm:flex-row sm:justify-around w-full">
           <div>
-            <h3 className="sub-title mb-4">Portfolio</h3>
+            <h3 className="sub-title mb-4 text-gray-400">Portfolio</h3>
             <FooterLinkList links={navLinks} />
           </div>
           <div>
-            <h3 className="sub-title mb-4">Get In Touch</h3>
+            <h3 className="sub-title mb-4 text-gray-400">Get In Touch</h3>
             <FooterLinkList links={socialLinks} />
           </div>
         </nav>
 
-        <span className="text-sm">
+        <span className="text-sm text-gray-500">
           © {currentYear} Developed By{' '}
           <strong className="font-normal">Shaukat - Portfolio</strong> All
           Rights Reserved.
