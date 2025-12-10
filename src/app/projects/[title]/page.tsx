@@ -3,6 +3,9 @@ import { convertToLowerCase } from '@/lib/util';
 import ReactMarkdown from 'react-markdown';
 import ProjectLink from '../_components/ProjectLink';
 import ProjectHero from '../_components/ProjectHero';
+import { CheckIcon } from '@/lib/icons';
+import Image from 'next/image';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 export const generateMetadata = async ({
   params,
@@ -41,6 +44,22 @@ const ProjectPage = async ({
           ),
           a: ({ href, children }) => (
             <ProjectLink href={href}>{children}</ProjectLink>
+          ),
+          li: ({ children }) => (
+            <li className="flex items-baseline gap-2">
+              <CheckIcon className="size-6" />
+              <span className="p-0 m-0">{children}</span>
+            </li>
+          ),
+          img: ({ src, alt, width, height, sizes }) => (
+            <Image
+              src={src as string | StaticImport}
+              sizes={sizes}
+              alt={alt as string}
+              width={width as number | `${number}`}
+              height={height as number | `${number}`}
+              priority
+            />
           ),
         }}
       >
